@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="employee" class="com.beans.Employee">
+	
+	<!-- Setter injection -->
+		<property name="name" value="Jyoti" />
+		<property name="salCode" value="10341" />
+	</bean>
+	
+	<bean id="address" class="com.beans.Address" lazy-init="true">
+		<property name="city" value="Pune" />
+		<property name="zipcode" value="411028" />
+	</bean>
+</beans>
